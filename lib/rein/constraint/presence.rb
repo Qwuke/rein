@@ -6,7 +6,7 @@ module Rein
 
       def add_presence_constraint(table, attribute, options={})
         name       = "#{table}_#{attribute}"
-        conditions = "#{attribute} !~ '^\s*$'"
+        conditions = "#{attribute} !~ '^\\s*$'"
         if options[:if].present?
           conditions = "NOT (#{options[:if]}) OR (#{conditions})"
         end
