@@ -122,6 +122,13 @@ you want to ensure that there is an actual value for a string:
 add_presence_constraint :books, :title
 ```
 
+If you only want to enforce the constraint under certain conditions,
+you can pass an optional `if` option:
+
+```ruby
+add_presence_constraint :books, :isbn, if: "status = 'published'"
+```
+
 ## Example
 
 Let's have a look at constraining database values for this simple library
