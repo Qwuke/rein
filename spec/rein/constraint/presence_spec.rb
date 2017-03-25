@@ -20,5 +20,4 @@ RSpec.describe Rein::Constraint::Presence, "#add_presence_constraint" do
     before { adapter.add_presence_constraint(:books, :isbn, if: "state = 'published'") }
     it { is_expected.to have_received(:execute).with("ALTER TABLE books ADD CONSTRAINT books_isbn CHECK (NOT (state = 'published') OR (isbn !~ '^\\s*$'))") }
   end
-
 end
