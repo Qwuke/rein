@@ -1,0 +1,24 @@
+# Set this up by saying:
+#     postgres=# create user rein_test with password 'rein_test';
+#     postgres=# create database rein_test with owner rein_test;
+#     postgres=# grant all privileges on database rein_test to rein_test;
+postgres:
+  adapter: postgres
+  host: localhost
+  database: rein_test
+  username: rein_test
+  password: rein_test
+  encoding: utf8
+  template: template0
+
+# Set this up by saying:
+#     mysql> create database rein_test;
+#     mysql> grant all privileges on rein_test.* to rein_test@localhost identified by 'rein_test';
+mysql:
+  adapter: mysql2
+  host: localhost
+  database: rein_test
+  username: rein_test
+  password: rein_test
+  encoding: utf8
+  
